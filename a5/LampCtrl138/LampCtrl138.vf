@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LampCtrl138.vf
+// /___/   /\     Timestamp : 11/02/2016 11:23:43
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family kintex7 -verilog E:/LampCtrl138/LampCtrl138.vf -w E:/LampCtrl138/LampCtrl138.sch
+//Design Name: LampCtrl138
+//Device: kintex7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LampCtrl138(S1, 
+                   S2, 
+                   S3, 
+                   Buzzer, 
+                   F, 
+                   LED);
+
+    input S1;
+    input S2;
+    input S3;
+   output Buzzer;
+   output F;
+   output [0:6] LED;
+   
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_16;
+   wire [7:0] y;
+   
+   D_74LS138  XLXI_1 (.A(S1), 
+                     .B(S2), 
+                     .C(S3), 
+                     .G(XLXN_4), 
+                     .G2A(XLXN_6), 
+                     .G2B(XLXN_7), 
+                     .Y(y[7:0]));
+   VCC  XLXI_2 (.P(XLXN_4));
+   GND  XLXI_3 (.G(XLXN_6));
+   GND  XLXI_4 (.G(XLXN_7));
+   NAND4  XLXI_8 (.I0(y[7]), 
+                 .I1(y[4]), 
+                 .I2(y[2]), 
+                 .I3(y[1]), 
+                 .O(XLXN_16));
+   VCC  XLXI_9 (.P(Buzzer));
+   VCC  XLXI_10 (.P(LED[0]));
+   VCC  XLXI_11 (.P(LED[1]));
+   VCC  XLXI_12 (.P(LED[2]));
+   VCC  XLXI_13 (.P(LED[3]));
+   VCC  XLXI_14 (.P(LED[4]));
+   VCC  XLXI_15 (.P(LED[5]));
+   VCC  XLXI_16 (.P(LED[6]));
+   INV  XLXI_17 (.I(XLXN_16), 
+                .O(F));
+endmodule

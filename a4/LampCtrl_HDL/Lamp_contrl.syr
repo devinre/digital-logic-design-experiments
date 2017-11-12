@@ -1,0 +1,397 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Reading design: Lamp_contrl.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Lamp_contrl.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Lamp_contrl"
+Output Format                      : NGC
+Target Device                      : xc7k160t-1-fbg676
+
+---- Source Options
+Top Module Name                    : Lamp_contrl
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\3150103623\LampCtrl_HDL\LampCtrl.v" into library work
+Parsing module <Lamp_contrl>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Lamp_contrl>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Lamp_contrl>.
+    Related source file is "E:\3150103623\LampCtrl_HDL\LampCtrl.v".
+        C_NUM = 28
+        C_MAX = 28'b1111111111111111111111111111
+    Found 28-bit register for signal <count>.
+    Found 28-bit adder for signal <c_next> created at line 54.
+    Found 28-bit comparator greater for signal <NF> created at line 43
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Lamp_contrl> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 28-bit adder                                          : 1
+# Registers                                            : 1
+ 28-bit register                                       : 1
+# Comparators                                          : 1
+ 28-bit comparator greater                             : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Lamp_contrl>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Lamp_contrl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 28-bit up counter                                     : 1
+# Comparators                                          : 1
+ 28-bit comparator greater                             : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Lamp_contrl> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Lamp_contrl, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Lamp_contrl.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 106
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 27
+#      LUT3                        : 8
+#      LUT5                        : 5
+#      MUXCY                       : 34
+#      VCC                         : 1
+#      XORCY                       : 28
+# FlipFlops/Latches                : 28
+#      FDR                         : 6
+#      FDRE                        : 22
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 3
+#      OBUF                        : 9
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k160tfbg676-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              28  out of  202800     0%  
+ Number of Slice LUTs:                   42  out of  101400     0%  
+    Number used as Logic:                42  out of  101400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     42
+   Number with an unused Flip Flop:      14  out of     42    33%  
+   Number with an unused LUT:             0  out of     42     0%  
+   Number of fully used LUT-FF pairs:    28  out of     42    66%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    400     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 28    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.379ns (Maximum Frequency: 420.345MHz)
+   Minimum input arrival time before clock: 1.531ns
+   Maximum output required time after clock: 2.351ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.379ns (frequency: 420.345MHz)
+  Total number of paths / destination ports: 1196 / 50
+-------------------------------------------------------------------------
+Delay:               2.379ns (Levels of Logic = 8)
+  Source:            count_0 (FF)
+  Destination:       count_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_0 to count_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.282   0.739  count_0 (count_0)
+     LUT5:I0->O            1   0.053   0.000  Mcompar_NF_lut<0> (Mcompar_NF_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  Mcompar_NF_cy<0> (Mcompar_NF_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<1> (Mcompar_NF_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<2> (Mcompar_NF_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<3> (Mcompar_NF_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<4> (Mcompar_NF_cy<4>)
+     MUXCY:CI->O           8   0.015   0.000  Mcompar_NF_cy<5> (F_OBUF)
+     MUXCY:CI->O          22   0.204   0.535  Mcompar_NF_cy<5>_inv1_cy (NF)
+     FDRE:CE                   0.200          count_6
+    ----------------------------------------
+    Total                      2.379ns (1.105ns logic, 1.274ns route)
+                                       (46.4% logic, 53.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 84 / 28
+-------------------------------------------------------------------------
+Offset:              1.531ns (Levels of Logic = 2)
+  Source:            S1 (PAD)
+  Destination:       count_6 (FF)
+  Destination Clock: clk rising
+
+  Data Path: S1 to count_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.000   0.602  S1_IBUF (S1_IBUF)
+     LUT3:I0->O           28   0.053   0.551  w1 (w)
+     FDRE:R                    0.325          count_6
+    ----------------------------------------
+    Total                      1.531ns (0.378ns logic, 1.153ns route)
+                                       (24.7% logic, 75.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 28 / 1
+-------------------------------------------------------------------------
+Offset:              2.351ns (Levels of Logic = 9)
+  Source:            count_0 (FF)
+  Destination:       F (PAD)
+  Source Clock:      clk rising
+
+  Data Path: count_0 to F
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.282   0.739  count_0 (count_0)
+     LUT5:I0->O            1   0.053   0.000  Mcompar_NF_lut<0> (Mcompar_NF_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  Mcompar_NF_cy<0> (Mcompar_NF_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<1> (Mcompar_NF_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<2> (Mcompar_NF_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<3> (Mcompar_NF_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  Mcompar_NF_cy<4> (Mcompar_NF_cy<4>)
+     MUXCY:CI->O           8   0.015   0.445  Mcompar_NF_cy<5> (F_OBUF)
+     INV:I->O              1   0.067   0.399  Mcompar_NF_cy<5>_inv_INV_0 (Mcompar_NF_cy<5>_inv)
+     OBUF:I->O                 0.000          F_OBUF (F)
+    ----------------------------------------
+    Total                      2.351ns (0.768ns logic, 1.583ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.379|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.60 secs
+ 
+--> 
+
+Total memory usage is 238252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

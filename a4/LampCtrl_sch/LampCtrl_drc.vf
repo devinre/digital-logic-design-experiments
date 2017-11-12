@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LampCtrl_drc.vf
+// /___/   /\     Timestamp : 10/25/2016 17:34:12
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\sch2hdl.exe -intstyle ise -family kintex7 -verilog LampCtrl_drc.vf -w E:/3150103623/LampCtrl_sch/LampCtrl.sch
+//Design Name: LampCtrl
+//Device: kintex7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LampCtrl(S1, 
+                S2, 
+                S3, 
+                F);
+
+    input S1;
+    input S2;
+    input S3;
+   output F;
+   
+   wire XLXN_3;
+   wire XLXN_7;
+   wire XLXN_12;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   
+   INV  XLXI_1 (.I(S1), 
+               .O(XLXN_3));
+   INV  XLXI_2 (.I(S2), 
+               .O(XLXN_7));
+   INV  XLXI_3 (.I(S3), 
+               .O(XLXN_12));
+   AND3  XLXI_4 (.I0(XLXN_12), 
+                .I1(XLXN_7), 
+                .I2(S1), 
+                .O(XLXN_15));
+   AND3  XLXI_5 (.I0(XLXN_12), 
+                .I1(S2), 
+                .I2(XLXN_3), 
+                .O(XLXN_16));
+   AND3  XLXI_6 (.I0(S3), 
+                .I1(XLXN_7), 
+                .I2(XLXN_3), 
+                .O(XLXN_17));
+   AND3  XLXI_7 (.I0(S3), 
+                .I1(S2), 
+                .I2(S1), 
+                .O(XLXN_18));
+   OR4  XLXI_8 (.I0(XLXN_18), 
+               .I1(XLXN_17), 
+               .I2(XLXN_16), 
+               .I3(XLXN_15), 
+               .O(F));
+endmodule

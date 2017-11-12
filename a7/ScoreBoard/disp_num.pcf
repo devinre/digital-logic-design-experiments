@@ -1,0 +1,29 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Nov 18 10:55:34 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Segment<5>" LOCATE = SITE "AC24" LEVEL 1;
+COMP "Segment<6>" LOCATE = SITE "AC23" LEVEL 1;
+COMP "Segment<7>" LOCATE = SITE "AA22" LEVEL 1;
+COMP "Buzzer" LOCATE = SITE "AF24" LEVEL 1;
+COMP "clk" LOCATE = SITE "AC18" LEVEL 1;
+COMP "points<0>" LOCATE = SITE "AA10" LEVEL 1;
+COMP "points<1>" LOCATE = SITE "AB10" LEVEL 1;
+COMP "points<2>" LOCATE = SITE "AA13" LEVEL 1;
+COMP "AN<0>" LOCATE = SITE "AD21" LEVEL 1;
+COMP "points<3>" LOCATE = SITE "AA12" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "AC21" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "AB21" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "AC22" LEVEL 1;
+COMP "LES<0>" LOCATE = SITE "Y13" LEVEL 1;
+COMP "LES<1>" LOCATE = SITE "Y12" LEVEL 1;
+COMP "LES<2>" LOCATE = SITE "AD11" LEVEL 1;
+COMP "LES<3>" LOCATE = SITE "AD10" LEVEL 1;
+COMP "Segment<0>" LOCATE = SITE "AB22" LEVEL 1;
+COMP "Segment<1>" LOCATE = SITE "AD24" LEVEL 1;
+COMP "Segment<2>" LOCATE = SITE "AD23" LEVEL 1;
+COMP "Segment<3>" LOCATE = SITE "Y21" LEVEL 1;
+COMP "Segment<4>" LOCATE = SITE "W20" LEVEL 1;
+SCHEMATIC END;
+

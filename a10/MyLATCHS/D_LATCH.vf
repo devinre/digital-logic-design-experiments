@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : D_LATCH.vf
+// /___/   /\     Timestamp : 11/29/2016 13:07:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family kintex7 -verilog Y:/Desktop/MyLATCHS/D_LATCH.vf -w Y:/Desktop/MyLATCHS/D_LATCH.sch
+//Design Name: D_LATCH
+//Device: kintex7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module D_LATCH(C, 
+               D, 
+               Q, 
+               Qbar);
+
+    input C;
+    input D;
+   output Q;
+   output Qbar;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_7;
+   wire Q_DUMMY;
+   wire Qbar_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   assign Qbar = Qbar_DUMMY;
+   NAND2  XLXI_1 (.I0(C), 
+                 .I1(D), 
+                 .O(XLXN_1));
+   NAND2  XLXI_2 (.I0(XLXN_7), 
+                 .I1(C), 
+                 .O(XLXN_2));
+   NAND2  XLXI_3 (.I0(Qbar_DUMMY), 
+                 .I1(XLXN_1), 
+                 .O(Q_DUMMY));
+   NAND2  XLXI_4 (.I0(XLXN_2), 
+                 .I1(Q_DUMMY), 
+                 .O(Qbar_DUMMY));
+   INV  XLXI_5 (.I(D), 
+               .O(XLXN_7));
+endmodule

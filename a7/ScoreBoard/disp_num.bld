@@ -1,0 +1,92 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -uc k7.ucf -p xc7k160t-fbg676-2L disp_num.ngc
+disp_num.ngd
+
+Reading NGO file "E:/3150103623_DDD/ScoreBoard/disp_num.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "k7.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:119 - Constraint <NET "HEX[0]" LOC = AF8  |>
+   [k7.ucf(10)]: This constraint cannot be distributed from the design objects
+   matching 'NET "HEX[0]"' because those design objects do not contain or drive
+   any instances of the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "HEX[0]" LOC = AF8  |> [k7.ucf(10)]' could not be found and so the
+   Locate constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <IOSTANDARD = LVCMOS15;> [k7.ucf(10)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "HEX[0]"' because those design objects do not contain or drive any instances
+   of the correct type.
+
+WARNING:ConstraintSystem:119 - Constraint <NET "HEX[1]" LOC = AE13  |>
+   [k7.ucf(11)]: This constraint cannot be distributed from the design objects
+   matching 'NET "HEX[1]"' because those design objects do not contain or drive
+   any instances of the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "HEX[1]" LOC = AE13  |> [k7.ucf(11)]' could not be found and so the
+   Locate constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <IOSTANDARD = LVCMOS15;> [k7.ucf(11)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "HEX[1]"' because those design objects do not contain or drive any instances
+   of the correct type.
+
+WARNING:ConstraintSystem:119 - Constraint <NET "HEX[2]" LOC = AF13  |>
+   [k7.ucf(12)]: This constraint cannot be distributed from the design objects
+   matching 'NET "HEX[2]"' because those design objects do not contain or drive
+   any instances of the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "HEX[2]" LOC = AF13  |> [k7.ucf(12)]' could not be found and so the
+   Locate constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <IOSTANDARD = LVCMOS15;> [k7.ucf(12)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "HEX[2]"' because those design objects do not contain or drive any instances
+   of the correct type.
+
+WARNING:ConstraintSystem:119 - Constraint <NET "HEX[3]" LOC = AF10  |>
+   [k7.ucf(13)]: This constraint cannot be distributed from the design objects
+   matching 'NET "HEX[3]"' because those design objects do not contain or drive
+   any instances of the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "HEX[3]" LOC = AF10  |> [k7.ucf(13)]' could not be found and so the
+   Locate constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <IOSTANDARD = LVCMOS15;> [k7.ucf(13)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "HEX[3]"' because those design objects do not contain or drive any instances
+   of the correct type.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  12
+
+Total memory usage is 144428 kilobytes
+
+Writing NGD file "disp_num.ngd" ...
+Total REAL time to NGDBUILD completion:  7 sec
+Total CPU time to NGDBUILD completion:   7 sec
+
+Writing NGDBUILD log file "disp_num.bld"...

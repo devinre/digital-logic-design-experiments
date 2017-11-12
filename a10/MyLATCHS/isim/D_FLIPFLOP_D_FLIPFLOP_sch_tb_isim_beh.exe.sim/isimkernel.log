@@ -1,0 +1,28 @@
+Command line:
+   D_FLIPFLOP_D_FLIPFLOP_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57009
+
+Tue Nov 29 18:22:11 2016
+
+
+ Elaboration Time: 0.078001 sec
+
+ Current Memory Usage: 670.368 Meg
+
+ Total Signals          : 71
+ Total Nets             : 30
+ Total Signal Drivers   : 22
+ Total Blocks           : 16
+ Total Primitive Blocks : 12
+ Total Processes        : 25
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 112
+
+ Total Simulation Time: 0.078001 sec
+
+ Current Memory Usage: 670.368 Meg
+
+Tue Nov 29 18:25:11 2016
+

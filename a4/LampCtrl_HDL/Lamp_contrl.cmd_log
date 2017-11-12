@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "E:/3150103623/LampCtrl_HDL/Lamp_contrl.xst" -ofn "E:/3150103623/LampCtrl_HDL/Lamp_contrl.syr" 
+xst -intstyle ise -ifn "E:/3150103623/LampCtrl_HDL/Lamp_contrl.xst" -ofn "E:/3150103623/LampCtrl_HDL/Lamp_contrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc K7.ucf -p xc7k160t-fbg676-1 Lamp_contrl.ngc Lamp_contrl.ngd  
+map -intstyle ise -p xc7k160t-fbg676-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Lamp_contrl_map.ncd Lamp_contrl.ngd Lamp_contrl.pcf 
+par -w -intstyle ise -ol high -mt off Lamp_contrl_map.ncd Lamp_contrl.ncd Lamp_contrl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Lamp_contrl.twx Lamp_contrl.ncd -o Lamp_contrl.twr Lamp_contrl.pcf -ucf K7.ucf 
+bitgen -intstyle ise -f Lamp_contrl.ut Lamp_contrl.ncd 

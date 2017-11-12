@@ -1,0 +1,4 @@
+vhdtdtfi -lib work E:/3150103623_DDD/ScoreBoard/clkdiv.v -lang verilog -prj ScoreBoard -o clkdiv.spl -module clkdiv -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w clkdiv.spl E:/3150103623_DDD/ScoreBoard/clkdiv.sym 
+vhdtdtfi -lib work E:/3150103623_DDD/ScoreBoard/clkdiv.v -lang verilog -prj ScoreBoard -o clkdiv.spl -module clkdiv -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 -w clkdiv.spl E:/3150103623_DDD/ScoreBoard/clkdiv.sym 

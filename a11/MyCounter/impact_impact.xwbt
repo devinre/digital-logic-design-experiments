@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\MyCounter\impact.xsl
+OUTFILE=D:\MyCounter\impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=D:\MyCounter
+LICENSE=iMPACT
+USER_INFO=iMPACT

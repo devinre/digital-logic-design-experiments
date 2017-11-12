@@ -1,0 +1,7 @@
+sch2hdl -intstyle ise -family kintex7 -verilog DisplaySync_drc.vf -w E:/3150103623/ScoreBoard/DisplaySync.sch 
+sch2sym -intstyle ise -family kintex7 -refsym DisplaySync E:/3150103623/ScoreBoard/DisplaySync.sch E:/3150103623/ScoreBoard/DisplaySync.sym 
+sch2hdl -intstyle ise -family kintex7 -verilog DisplaySync_drc.vf -w E:/3150103623/ScoreBoard/DisplaySync.sch 
+sch2sym -intstyle ise -family kintex7 -refsym DisplaySync E:/3150103623/ScoreBoard/DisplaySync.sch E:/3150103623/ScoreBoard/DisplaySync.sym 
+sch2sym -intstyle ise -family kintex7 -refsym DisplaySync E:/3150103623/ScoreBoard/DisplaySync.sch E:/3150103623/ScoreBoard/DisplaySync.sym 
+sch2sym -intstyle ise -family kintex7 -w -refsym DisplaySync E:/3150103623/ScoreBoard/DisplaySync.sch E:/3150103623/ScoreBoard/DisplaySync.sym 
+sch2hdl -intstyle ise -family kintex7 -verilog DisplaySync_drc.vf -w E:/3150103623_DDD/ScoreBoard/DisplaySync.sch 

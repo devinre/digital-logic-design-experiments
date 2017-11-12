@@ -1,0 +1,9 @@
+sch2hdl -intstyle ise -family kintex7 -verilog disp_num_drc.vf -w E:/3150103623_DDD/ScoreBoard/disp_num.sch 
+xst -intstyle ise -ifn "E:/3150103623_DDD/ScoreBoard/disp_num.xst" -ofn "E:/3150103623_DDD/ScoreBoard/disp_num.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc k7.ucf -p xc7k160t-fbg676-2L disp_num.ngc disp_num.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc k7.ucf -p xc7k160t-fbg676-2L disp_num.ngc disp_num.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc k7.ucf -p xc7k160t-fbg676-2L disp_num.ngc disp_num.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc k7.ucf -p xc7k160t-fbg676-2L disp_num.ngc disp_num.ngd  
+map -intstyle ise -p xc7k160t-fbg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o disp_num_map.ncd disp_num.ngd disp_num.pcf 
+par -w -intstyle ise -ol high -mt off disp_num_map.ncd disp_num.ncd disp_num.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml disp_num.twx disp_num.ncd -o disp_num.twr disp_num.pcf -ucf k7.ucf 

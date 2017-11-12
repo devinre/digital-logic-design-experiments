@@ -1,0 +1,231 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2L -n
+3 -fastpaths -xml disp_num.twx disp_num.ncd -o disp_num.twr disp_num.pcf -ucf
+k7.ucf
+
+Design file:              disp_num.ncd
+Physical constraint file: disp_num.pcf
+Device,package,speed:     xc7k160t,fbg676,C,-2L (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |   -0.997(R)|      FAST  |    3.460(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+AN<0>       |        12.948(R)|      SLOW  |         5.409(R)|      FAST  |clk_BUFGP         |   0.000|
+AN<1>       |        12.622(R)|      SLOW  |         5.299(R)|      FAST  |clk_BUFGP         |   0.000|
+AN<2>       |        12.609(R)|      SLOW  |         5.325(R)|      FAST  |clk_BUFGP         |   0.000|
+AN<3>       |        12.600(R)|      SLOW  |         5.267(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<0>  |        14.913(R)|      SLOW  |         5.807(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<1>  |        14.829(R)|      SLOW  |         5.863(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<2>  |        14.566(R)|      SLOW  |         5.707(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<3>  |        15.392(R)|      SLOW  |         5.880(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<4>  |        13.951(R)|      SLOW  |         5.720(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<5>  |        14.286(R)|      SLOW  |         5.580(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<6>  |        13.358(R)|      SLOW  |         5.353(R)|      FAST  |clk_BUFGP         |   0.000|
+Segment<7>  |        12.612(R)|      SLOW  |         5.358(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.140|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+HEXS<0>        |Segment<0>     |    9.511|
+HEXS<0>        |Segment<1>     |    9.495|
+HEXS<0>        |Segment<2>     |    9.232|
+HEXS<0>        |Segment<3>     |    9.990|
+HEXS<0>        |Segment<4>     |    8.523|
+HEXS<0>        |Segment<5>     |    8.465|
+HEXS<0>        |Segment<6>     |    7.859|
+HEXS<1>        |Segment<0>     |    9.596|
+HEXS<1>        |Segment<1>     |    8.774|
+HEXS<1>        |Segment<2>     |    8.878|
+HEXS<1>        |Segment<3>     |   10.075|
+HEXS<1>        |Segment<4>     |    8.594|
+HEXS<1>        |Segment<5>     |    8.969|
+HEXS<1>        |Segment<6>     |    8.041|
+HEXS<2>        |Segment<0>     |    9.820|
+HEXS<2>        |Segment<1>     |    9.475|
+HEXS<2>        |Segment<2>     |    9.212|
+HEXS<2>        |Segment<3>     |   10.299|
+HEXS<2>        |Segment<4>     |    8.860|
+HEXS<2>        |Segment<5>     |    9.153|
+HEXS<2>        |Segment<6>     |    8.361|
+HEXS<3>        |Segment<0>     |    9.298|
+HEXS<3>        |Segment<1>     |    9.627|
+HEXS<3>        |Segment<2>     |    9.364|
+HEXS<3>        |Segment<3>     |    9.777|
+HEXS<3>        |Segment<4>     |    8.823|
+HEXS<3>        |Segment<5>     |    8.863|
+HEXS<3>        |Segment<6>     |    7.711|
+HEXS<4>        |Segment<0>     |    9.597|
+HEXS<4>        |Segment<1>     |    9.581|
+HEXS<4>        |Segment<2>     |    9.318|
+HEXS<4>        |Segment<3>     |   10.076|
+HEXS<4>        |Segment<4>     |    8.609|
+HEXS<4>        |Segment<5>     |    8.551|
+HEXS<4>        |Segment<6>     |    7.945|
+HEXS<5>        |Segment<0>     |    9.796|
+HEXS<5>        |Segment<1>     |    8.974|
+HEXS<5>        |Segment<2>     |    9.078|
+HEXS<5>        |Segment<3>     |   10.275|
+HEXS<5>        |Segment<4>     |    8.794|
+HEXS<5>        |Segment<5>     |    9.169|
+HEXS<5>        |Segment<6>     |    8.241|
+HEXS<6>        |Segment<0>     |    9.745|
+HEXS<6>        |Segment<1>     |    9.400|
+HEXS<6>        |Segment<2>     |    9.137|
+HEXS<6>        |Segment<3>     |   10.224|
+HEXS<6>        |Segment<4>     |    8.785|
+HEXS<6>        |Segment<5>     |    9.078|
+HEXS<6>        |Segment<6>     |    8.286|
+HEXS<7>        |Segment<0>     |    9.537|
+HEXS<7>        |Segment<1>     |    9.866|
+HEXS<7>        |Segment<2>     |    9.603|
+HEXS<7>        |Segment<3>     |   10.016|
+HEXS<7>        |Segment<4>     |    9.062|
+HEXS<7>        |Segment<5>     |    9.102|
+HEXS<7>        |Segment<6>     |    7.950|
+HEXS<8>        |Segment<0>     |    9.866|
+HEXS<8>        |Segment<1>     |    9.850|
+HEXS<8>        |Segment<2>     |    9.587|
+HEXS<8>        |Segment<3>     |   10.345|
+HEXS<8>        |Segment<4>     |    8.878|
+HEXS<8>        |Segment<5>     |    8.820|
+HEXS<8>        |Segment<6>     |    8.214|
+HEXS<9>        |Segment<0>     |   10.251|
+HEXS<9>        |Segment<1>     |    9.429|
+HEXS<9>        |Segment<2>     |    9.533|
+HEXS<9>        |Segment<3>     |   10.730|
+HEXS<9>        |Segment<4>     |    9.249|
+HEXS<9>        |Segment<5>     |    9.624|
+HEXS<9>        |Segment<6>     |    8.696|
+HEXS<10>       |Segment<0>     |   10.316|
+HEXS<10>       |Segment<1>     |    9.971|
+HEXS<10>       |Segment<2>     |    9.708|
+HEXS<10>       |Segment<3>     |   10.795|
+HEXS<10>       |Segment<4>     |    9.356|
+HEXS<10>       |Segment<5>     |    9.649|
+HEXS<10>       |Segment<6>     |    8.857|
+HEXS<11>       |Segment<0>     |   10.249|
+HEXS<11>       |Segment<1>     |   10.578|
+HEXS<11>       |Segment<2>     |   10.315|
+HEXS<11>       |Segment<3>     |   10.728|
+HEXS<11>       |Segment<4>     |    9.774|
+HEXS<11>       |Segment<5>     |    9.814|
+HEXS<11>       |Segment<6>     |    8.662|
+HEXS<12>       |Segment<0>     |   10.389|
+HEXS<12>       |Segment<1>     |   10.373|
+HEXS<12>       |Segment<2>     |   10.110|
+HEXS<12>       |Segment<3>     |   10.868|
+HEXS<12>       |Segment<4>     |    9.401|
+HEXS<12>       |Segment<5>     |    9.343|
+HEXS<12>       |Segment<6>     |    8.737|
+HEXS<13>       |Segment<0>     |   10.642|
+HEXS<13>       |Segment<1>     |    9.820|
+HEXS<13>       |Segment<2>     |    9.924|
+HEXS<13>       |Segment<3>     |   11.121|
+HEXS<13>       |Segment<4>     |    9.640|
+HEXS<13>       |Segment<5>     |   10.015|
+HEXS<13>       |Segment<6>     |    9.087|
+HEXS<14>       |Segment<0>     |   10.194|
+HEXS<14>       |Segment<1>     |    9.849|
+HEXS<14>       |Segment<2>     |    9.586|
+HEXS<14>       |Segment<3>     |   10.673|
+HEXS<14>       |Segment<4>     |    9.234|
+HEXS<14>       |Segment<5>     |    9.527|
+HEXS<14>       |Segment<6>     |    8.735|
+HEXS<15>       |Segment<0>     |   10.057|
+HEXS<15>       |Segment<1>     |   10.386|
+HEXS<15>       |Segment<2>     |   10.123|
+HEXS<15>       |Segment<3>     |   10.536|
+HEXS<15>       |Segment<4>     |    9.582|
+HEXS<15>       |Segment<5>     |    9.622|
+HEXS<15>       |Segment<6>     |    8.470|
+LES<0>         |Segment<0>     |    9.122|
+LES<0>         |Segment<1>     |    9.563|
+LES<0>         |Segment<2>     |    9.621|
+LES<0>         |Segment<3>     |    9.314|
+LES<0>         |Segment<4>     |    9.288|
+LES<0>         |Segment<5>     |    9.203|
+LES<0>         |Segment<6>     |    8.835|
+LES<1>         |Segment<0>     |    9.002|
+LES<1>         |Segment<1>     |    9.443|
+LES<1>         |Segment<2>     |    9.501|
+LES<1>         |Segment<3>     |    9.194|
+LES<1>         |Segment<4>     |    9.168|
+LES<1>         |Segment<5>     |    9.083|
+LES<1>         |Segment<6>     |    8.715|
+LES<2>         |Segment<0>     |    8.908|
+LES<2>         |Segment<1>     |    9.349|
+LES<2>         |Segment<2>     |    9.407|
+LES<2>         |Segment<3>     |    9.100|
+LES<2>         |Segment<4>     |    9.074|
+LES<2>         |Segment<5>     |    8.989|
+LES<2>         |Segment<6>     |    8.621|
+LES<3>         |Segment<0>     |    9.103|
+LES<3>         |Segment<1>     |    9.544|
+LES<3>         |Segment<2>     |    9.602|
+LES<3>         |Segment<3>     |    9.295|
+LES<3>         |Segment<4>     |    9.269|
+LES<3>         |Segment<5>     |    9.184|
+LES<3>         |Segment<6>     |    8.816|
+points<0>      |Segment<7>     |    8.306|
+points<1>      |Segment<7>     |    8.101|
+points<2>      |Segment<7>     |    8.171|
+points<3>      |Segment<7>     |    8.145|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Nov 18 10:56:57 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 472 MB
+
+
+

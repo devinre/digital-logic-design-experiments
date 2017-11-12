@@ -1,0 +1,10 @@
+Command line:
+   MyMC14495_MyMC14495_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  36559
+
+Tue Nov 08 17:03:33 2016
+
+
+ Elaboration Time: 0.202802 sec

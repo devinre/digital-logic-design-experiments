@@ -1,0 +1,4 @@
+sch2hdl -intstyle ise -family kintex7 -verilog Counter4b_drc.vf -w D:/MyCounter/Counter4b.sch 
+sch2hdl -intstyle ise -family kintex7 -verilog Counter4b.vf -w D:/MyCounter/Counter4b.sch 
+sch2hdl -intstyle ise -family kintex7 -verilog Counter4b_drc.vf -w D:/MyCounter/Counter4b.sch 
+sch2hdl -intstyle ise -family kintex7 -verilog Counter4b.vf -w D:/MyCounter/Counter4b.sch 

@@ -1,0 +1,1 @@
+vhdtdtfi -prj MyCounter -o D:/MyCounter/MyMC14495.tfi -module MyMC14495 -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work MyMC14495_drc.vf 

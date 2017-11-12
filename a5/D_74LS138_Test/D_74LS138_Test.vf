@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : D_74LS138_Test.vf
+// /___/   /\     Timestamp : 11/01/2016 17:44:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family kintex7 -verilog E:/3150102238/D_74LS138_Test/D_74LS138_Test.vf -w E:/3150102238/D_74LS138_Test/D_74LS138_Test.sch
+//Design Name: D_74LS138_Test
+//Device: kintex7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module D_74LS138_Test(A, 
+                      B, 
+                      C, 
+                      G, 
+                      G2A, 
+                      G2B, 
+                      Buzzer, 
+                      Y);
+
+    input A;
+    input B;
+    input C;
+    input G;
+    input G2A;
+    input G2B;
+   output Buzzer;
+   output [7:0] Y;
+   
+   
+   D_74LS138  XLXI_4 (.A(A), 
+                     .B(B), 
+                     .C(C), 
+                     .G(G), 
+                     .G2A(G2A), 
+                     .G2B(G2B), 
+                     .Y(Y[7:0]));
+   VCC  XLXI_5 (.P(Buzzer));
+endmodule

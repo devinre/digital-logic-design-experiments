@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family kintex7 -refsym D_LATCH Y:/Desktop/MyLATCHS/D_LATCH.sch Y:/Desktop/MyLATCHS/D_LATCH.sym 

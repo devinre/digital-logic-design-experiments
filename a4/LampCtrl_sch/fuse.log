@@ -1,0 +1,26 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/3150103623/LampCtrl_sch/LampCtrl_LampCtrl_sch_tb_isim_beh.exe -prj E:/3150103623/LampCtrl_sch/LampCtrl_LampCtrl_sch_tb_beh.prj work.LampCtrl_LampCtrl_sch_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/3150103623/LampCtrl_sch/LampCtrl.vf" into library work
+Analyzing Verilog file "E:/3150103623/LampCtrl_sch/LampCtrl_sim.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/3150103623/LampCtrl_sch/LampCtrl_sim.v" Line 18: Port Buzzer is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 105224 KB
+Fuse CPU Usage: 421 ms
+Compiling module INV
+Compiling module AND3
+Compiling module OR4
+Compiling module VCC
+Compiling module LampCtrl
+Compiling module LampCtrl_LampCtrl_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable E:/3150103623/LampCtrl_sch/LampCtrl_LampCtrl_sch_tb_isim_beh.exe
+Fuse Memory Usage: 109816 KB
+Fuse CPU Usage: 467 ms
